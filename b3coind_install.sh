@@ -18,7 +18,7 @@ echo set +o history >> /etc/profile
 
 apt-get update 
 apt-get upgrade -y
-apt-get install -y build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev unzip wget
+apt-get install -y libssl-dev libdb++-dev libboost-all-dev libqrencode-dev unzip wget
 
 # Install b3coind
 wget https://github.com/amosin/b3coind_install/raw/master/b3coind-3.1.1.2.deb -O /var/cache/apt/archives/b3coind-3.1.1.2.deb
