@@ -38,7 +38,7 @@ su -c "cat > ~/.B3-CoinV2/b3coin.conf << EOF
 rpcuser=b3coinrpc
 rpcpassword=`openssl rand -base64 32`
 EOF" -s /bin/sh b3fn01
-wget https://github.com/B3-Coin/B3-CoinV2/releases/download/v3.1.1.2/b3bootstrap.zip /home/b3fn01/.B3-CoinV2/ -s /bin/sh b3fn01
+su -c "wget https://github.com/B3-Coin/B3-CoinV2/releases/download/v3.1.1.2/b3bootstrap.zip -O /home/b3fn01/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
 su -c "unzip ~/.B3-CoinV2/b3bootstrap.zip && rm ~/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
 su -c "b3coind" -s /bin/sh b3fn01 &
 su - b3fn01
@@ -48,4 +48,5 @@ sleep 1
 echo ".."
 sleep 2
 echo "..."
-b3coind getblockcount
+echo 'Running b3coind getblockcount... Compare with https://chainz.cryptoid.info/b3/'
+su -c "b3coind getblockcount" -s /bin/sh b3fn01 &
