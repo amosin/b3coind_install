@@ -39,7 +39,7 @@ rpcuser=b3coinrpc
 rpcpassword=`openssl rand -base64 32`
 EOF" -s /bin/sh b3fn01
 su -c "wget https://github.com/B3-Coin/B3-CoinV2/releases/download/v3.1.1.2/b3bootstrap.zip -O /home/b3fn01/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
-su -c "unzip ~/.B3-CoinV2/b3bootstrap.zip && rm ~/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
+su -c "unzip ~/.B3-CoinV2/b3bootstrap.zip -d ~/.B3-CoinV2/ && rm ~/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
 su -c "b3coind" -s /bin/sh b3fn01 &
 su - b3fn01
 sleep 1
