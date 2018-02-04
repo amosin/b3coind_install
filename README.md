@@ -47,5 +47,6 @@ Compare the above output with the latest block on: https://chainz.cryptoid.info/
 
 * **Monerador** - *Initial work* - [amosin](https://github.com/amosin)
 
-## Acknowledgments
+## Donations:
 
+My B3Coin Wallet: SYLjy5hzCGwcppLjhtudGy5You1NZuEnqf
