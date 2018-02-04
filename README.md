@@ -49,4 +49,4 @@ Compare the above output with the latest block on: https://chainz.cryptoid.info/
 
 ## Donations:
 
-My B3Coin Wallet: SYLjy5hzCGwcppLjhtudGy5You1NZuEnqf
+My B3Coin Wallet Address: SYLjy5hzCGwcppLjhtudGy5You1NZuEnqf
