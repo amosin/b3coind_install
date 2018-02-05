@@ -27,8 +27,9 @@ apt-get install /var/cache/apt/archives/b3coind-3.1.1.2.deb
 
 
 # Swap
-sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
 chmod 600 /var/swap.1
+mkswap /var/swap.1
 /sbin/swapon /var/swap.1
 echo "/var/swap.1 swap swap defaults 0 0" >> /etc/fstab
 
