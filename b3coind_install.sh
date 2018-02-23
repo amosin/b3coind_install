@@ -25,6 +25,11 @@ wget https://github.com/amosin/b3coind_install/raw/master/b3coind-3.1.2.0.deb -O
 
 apt-get install /var/cache/apt/archives/b3coind-3.1.2.0.deb
 
+# bring up after reboot
+echo "@reboot b3fn01 b3coind" > /etc/cron.d/fundamentalnodes
+
+#Crontab to clear up logs
+crontab -l | { cat; echo "0 0 * * * echo "" > /home/b3fn01/.B3-CoinV2/debug.log"; } | crontab -
 
 # Swap
 /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
