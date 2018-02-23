@@ -27,7 +27,7 @@ apt-get install /var/cache/apt/archives/b3coind-3.1.2.0.deb
 
 
 # Swap
-/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
 chmod 600 /var/swap.1
 mkswap /var/swap.1
 /sbin/swapon /var/swap.1
