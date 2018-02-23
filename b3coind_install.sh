@@ -38,6 +38,20 @@ su -c "mkdir ~/.B3-CoinV2" -s /bin/sh b3fn01
 su -c "cat > ~/.B3-CoinV2/b3coin.conf << EOF
 rpcuser=b3coinrpc
 rpcpassword=`openssl rand -base64 32`
+rpcallowip=127.0.0.1
+rpcport=15647
+daemon=1
+server=1
+listen=1
+promode=1
+staking=0
+maxconnections=125
+logtimestamps=1
+#fundamentalnode=1
+#fundamentalnodeprivkey=
+#fundamentalnodeaddr=`ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`:5647
+bind=`ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`
+externalip=`ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`
 EOF" -s /bin/sh b3fn01
 #su -c "wget https://github.com/B3-Coin/B3-CoinV2/releases/download/v3.1.2.0/b3bootstrap.zip -O /home/b3fn01/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
 #su -c "unzip ~/.B3-CoinV2/b3bootstrap.zip -d ~/.B3-CoinV2/ && rm ~/.B3-CoinV2/b3bootstrap.zip" -s /bin/sh b3fn01
