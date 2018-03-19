@@ -41,6 +41,7 @@ Compare the above output with the latest block on: https://chainz.cryptoid.info/
 
 ## Versioning
 
+- 03/19/2018 - Updated script and Ubuntu package to wallet version 3.1.2.2.
 - 02/23/2018 - Updated script and Ubuntu package to wallet version 3.1.2.0.
 - 02/04/2018 - This script will install the current version of the B3Coin wallet 3.1.1.2.
 
