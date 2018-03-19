@@ -21,9 +21,9 @@ apt-get upgrade -y
 apt-get install -y libssl-dev libdb++-dev libboost-all-dev libqrencode-dev unzip wget
 
 # Install b3coind
-wget https://github.com/amosin/b3coind_install/raw/master/b3coind-3.1.2.0.deb -O /var/cache/apt/archives/b3coind-3.1.2.0.deb
+wget https://github.com/amosin/b3coind_install/raw/master/b3coind-3.1.2.2.deb -O /var/cache/apt/archives/b3coind-3.1.2.2.deb
 
-apt-get install /var/cache/apt/archives/b3coind-3.1.2.0.deb
+apt-get install /var/cache/apt/archives/b3coind-3.1.2.2.deb
 
 # bring up after reboot
 echo "@reboot b3fn01 b3coind" > /etc/cron.d/fundamentalnodes
